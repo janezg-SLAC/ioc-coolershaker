@@ -1,0 +1,11 @@
+record(bi, "$(DEV):$(RECORD_NAME)")
+{
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask(readCoil,$(OFFSET),1)UINT16")
+    field(DESC, "$(DESC)")
+    field(SCAN, "2 second")
+    field(ZNAM, "OFF")
+    field(ONAM, "ON")
+}
+

@@ -1,0 +1,10 @@
+record(ao, "$(DEV):$(RECORD_NAME)")
+{
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn(writeHoldingRegister,$(OFFSET))FLOAT32_BE")
+    field(OMSL, "supervisory")
+    field(DESC, "$(DESC)")
+    field(SCAN, "Passive")
+    field(VAL,  "0")
+}
+

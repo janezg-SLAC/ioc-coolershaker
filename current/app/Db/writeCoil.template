@@ -1,0 +1,11 @@
+record(bo, "$(DEV):$(RECORD_NAME)")
+{
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask(writeCoil,$(OFFSET),1)UINT16")
+    field(OMSL, "supervisory")
+    field(DESC, "$(DESC)")
+    field(SCAN, "Passive")
+    field(ZNAM, "OFF")
+    field(ONAM, "ON")
+}
+

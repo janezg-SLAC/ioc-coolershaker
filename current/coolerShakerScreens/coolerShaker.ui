@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>620</width>
+    <height>310</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>${DEV} Main</string>
+  </property>
+  <widget class="QLabel" name="Title">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>0</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>SCAS-II Control Screen</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="Alarms">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>271</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Alarms</string>
+   </property>
+   <widget class="QLabel" name="AlarmText1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Alarm - Low Input Voltage</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AlarmText2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Alarm - Thermister Error</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AlarmText3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Alarm - Over Current</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AlarmText4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Alarm - Low Temp Warning</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AlarmText5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Alarm - High Temp Warning</string>
+    </property>
+   </widget>
+   <widget class="PyDMByteIndicator" name="Alarm1Indicator">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>30</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://${DEV}:ALARM_LOW_INPUT_VOLTAGE_RBV</string>
+    </property>
+    <property name="onColor" stdset="0">
+     <color>
+      <red>255</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="orientation" stdset="0">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <property name="showLabels" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="circles" stdset="0">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="PyDMByteIndicator" name="Alarm2Indicator">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>50</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://${DEV}:ALARM_THERMISTER_ERROR_RBV</string>
+    </property>
+    <property name="onColor" stdset="0">
+     <color>
+      <red>255</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="orientation" stdset="0">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <property name="showLabels" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="circles" stdset="0">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="PyDMByteIndicator" name="Alarm3Indicator">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>70</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://${DEV}:ALARM_OVER_CURRENT_RBV</string>
+    </property>
+    <property name="onColor" stdset="0">
+     <color>
+      <red>255</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="orientation" stdset="0">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <property name="showLabels" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="circles" stdset="0">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="PyDMByteIndicator" name="Alarm4Indicator">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>90</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://${DEV}:ALARM_LOW_TEMP_RBV</string>
+    </property>
+    <property name="onColor" stdset="0">
+     <color>
+      <red>255</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="orientation" stdset="0">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <property name="showLabels" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="circles" stdset="0">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="PyDMByteIndicator" name="Alarm5Indicator">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>110</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://${DEV}:ALARM_HIGH_TEMP_RBV</string>
+    </property>
+    <property name="onColor" stdset="0">
+     <color>
+      <red>255</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="orientation" stdset="0">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <property name="showLabels" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="circles" stdset="0">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="Motor">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>271</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Motor</string>
+   </property>
+   <widget class="PyDMLabel" name="MotorStartStop_RBV">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>30</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="text">
+     <string>ON/OFF</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="precisionFromPV" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://${DEV}:MOTOR_RBV</string>
+    </property>
+   </widget>
+   <widget class="PyDMEnumButton" name="MotorStartStop">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://${DEV}:MOTOR_SET</string>
+    </property>
+    <property name="widgetType" stdset="0">
+     <enum>PyDMEnumButton::PushButton</enum>
+    </property>
+    <property name="orientation" stdset="0">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="MotorSpeedText">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Speed [deg/s]:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="MotorDegreesText">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Degrees of Rot. [deg]:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="MotorDwellText">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dwell Time [s]:</string>
+    </property>
+   </widget>
+   <widget class="PyDMLineEdit" name="Rotation">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>80</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="precisionFromPV" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://${DEV}:MOTOR_DEGREES_SET</string>
+    </property>
+   </widget>
+   <widget class="PyDMLineEdit" name="SpeedSet">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>60</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="precisionFromPV" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://${DEV}:MOTOR_SPEED_SET</string>
+    </property>
+   </widget>
+   <widget class="PyDMLineEdit" name="Dwell">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>100</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="precisionFromPV" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://${DEV}:MOTOR_DWELL_SET</string>
+    </property>
+   </widget>
+   <widget class="PyDMLabel" name="SpeedRBV">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>60</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string>Speed</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="precisionFromPV" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://${DEV}:MOTOR_SPEED_SET_RBV</string>
+    </property>
+   </widget>
+   <widget class="PyDMLabel" name="RotationRBV">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>80</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string>Rotation</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="precisionFromPV" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://${DEV}:MOTOR_DEGREES_SET_RBV</string>
+    </property>
+   </widget>
+   <widget class="PyDMLabel" name="DwellRBV">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>100</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string>DwellTime</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="precisionFromPV" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://${DEV}:MOTOR_DWELL_SET_RBV</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="Temperature">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>30</y>
+     <width>321</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Temperature</string>
+   </property>
+   <widget class="PyDMTimePlot" name="PyDMTimePlot">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>301</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+   </widget>
+   <widget class="PyDMLineEdit" name="SetTemperature">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>30</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="precisionFromPV" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://${DEV}:TEMP_SET</string>
+    </property>
+   </widget>
+   <widget class="PyDMLabel" name="SetTemperatureRBV">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>30</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string>SetTemp</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="precisionFromPV" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://${DEV}:TEMP_SET_RBV</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TemperatureSetText">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set Temperature [°C]:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TemperatureText">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Temperature [°C]:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TemperatureGraph">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>221</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Current Temperature Graph</string>
+    </property>
+   </widget>
+   <widget class="PyDMLabel" name="TemperatureRBV">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>50</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string>Temperature</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="precisionFromPV" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://${DEV}:CURRENT_TEMP_RBV</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PyDMLabel</class>
+   <extends>QLabel</extends>
+   <header>pydm.widgets.label</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMTimePlot</class>
+   <extends>QGraphicsView</extends>
+   <header>pydm.widgets.timeplot</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMByteIndicator</class>
+   <extends>QWidget</extends>
+   <header>pydm.widgets.byte</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMEnumButton</class>
+   <extends>QWidget</extends>
+   <header>pydm.widgets.enum_button</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>pydm.widgets.line_edit</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

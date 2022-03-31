@@ -1,0 +1,46 @@
+file readCoil.template {
+  pattern {RECORD_NAME, OFFSET, DESC}
+  {MOTOR_RBV, 0, "Read motor"}
+}
+
+file writeCoil.template {
+  pattern {RECORD_NAME, OFFSET, DESC}
+  {MOTOR_SET, 0, "Set motor on/off"}
+}
+
+file readDiscreteInput.template {
+  pattern {RECORD_NAME, OFFSET, DESC}
+  {ALARM_LOW_INPUT_VOLTAGE_RBV, 0, "Alarm - Low Input Voltage"}
+  {ALARM_THERMISTER_ERROR_RBV, 1, "Alarm - Thermister Error"}
+  {ALARM_OVER_CURRENT_RBV, 2, "Alarm - Over Current"}
+  {ALARM_LOW_TEMP_RBV, 3, "Alarm - Low Temp Warning"}
+  {ALARM_HIGH_TEMP_RBV, 4, "Alarm - High Temp Warning"}
+}
+
+file readHoldingRegister.template {
+  pattern {RECORD_NAME, OFFSET, DESC}
+  {TEMP_SET_RBV, 0, "temperature read back"}
+  {MOTOR_SPEED_SET_RBV, 2, "motor speed read back read back"}
+  {MOTOR_DEGREES_SET_RBV, 4, "motor degrees of rotation read back"}
+  {MOTOR_DWELL_SET_RBV, 6, "motor dwell time read back"}
+}
+
+file writeHoldingRegister.template {
+  pattern {RECORD_NAME, OFFSET, DESC}
+  {TEMP_SET, 0, "set temperature"}
+  {MOTOR_SPEED_SET, 2, "set motor speed"}
+  {MOTOR_DEGREES_SET, 4, "set motor degrees of rotation"}
+  {MOTOR_DWELL_SET, 6, "set motor dwell time"}
+}
+
+file readInputRegister.template {
+  pattern {RECORD_NAME, OFFSET, DESC}
+  {CURRENT_TEMP_RBV, 0, "current temperature read back"}
+}
+
+
+
+
+
+
+
