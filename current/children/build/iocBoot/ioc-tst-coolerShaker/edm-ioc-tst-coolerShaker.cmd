@@ -15,7 +15,7 @@ fi
 export IOC_PV=IOC:TST:TMO
 export BASE=TST:TMO
 
-pushd /reg/g/pcds/epics-dev/janezg/coolerShaker/current
+pushd /reg/g/pcds/epics-dev/janezg/git_iocs/ioc-coolershaker/current
 #edm -x -eolc	\
 #	-m "IOC=${IOC_PV}"		\
 #       -m "BASE=${BASE}"               \

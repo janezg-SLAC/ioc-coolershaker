@@ -1,0 +1,11 @@
+$(BASE):TEMP_SET_RBV                60 monitor
+$(BASE):MOTOR_SPEED_SET_RBV         60 monitor
+$(BASE):MOTOR_DEGREES_SET_RBV       60 monitor
+$(BASE):MOTOR_DWELL_SET_RBV         60 monitor
+$(BASE):CURRENT_TEMP_RBV            60 monitor
+$(BASE):MOTOR_RBV                   60 monitor
+$(BASE):ALARM_LOW_INPUT_VOLTAGE_RBV 60 monitor
+$(BASE):ALARM_THERMISTER_ERROR_RBV  60 monitor
+$(BASE):ALARM_OVER_CURRENT_RBV      60 monitor
+$(BASE):ALARM_LOW_TEMP_RBV          60 monitor
+$(BASE):ALARM_HIGH_TEMP_RBV         60 monitor

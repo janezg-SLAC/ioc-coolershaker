@@ -6,4 +6,8 @@ file autosave_iocAdmin.tpl-req
 	}
 }
 
-# TODO: Add your custom template expansions here
+# Add your custom template expansions here
+file coolerShaker.tpl-req
+{
+    { BASE = $(BASE) }
+}

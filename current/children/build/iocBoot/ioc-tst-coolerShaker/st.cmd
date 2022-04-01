@@ -1,11 +1,11 @@
-#!/reg/g/pcds/epics-dev/janezg/coolerShaker/current/bin/rhel7-x86_64/coolerShaker
+#!/reg/g/pcds/epics-dev/janezg/git_iocs/ioc-coolershaker/current/bin/rhel7-x86_64/coolerShaker
 < envPaths
 epicsEnvSet( "ENGINEER" , "Janez Govednik (janezg)" )
 epicsEnvSet( "IOCSH_PS1", "ioc-tst-coolerShaker>" )
 epicsEnvSet( "IOC_PV",    "IOC:TST:TMO"   )
 epicsEnvSet( "LOCATION",  "Somewhere Over the Rainbow")
-epicsEnvSet( "IOCTOP",    "/reg/g/pcds/epics-dev/janezg/coolerShaker/current"   )
-epicsEnvSet( "TOP",       "/reg/g/pcds/epics-dev/janezg/coolerShaker/current/children/build"      )
+epicsEnvSet( "IOCTOP",    "/reg/g/pcds/epics-dev/janezg/git_iocs/ioc-coolershaker/current"   )
+epicsEnvSet( "TOP",       "/reg/g/pcds/epics-dev/janezg/git_iocs/ioc-coolershaker/current/children/build"      )
 
 cd( "$(IOCTOP)" )
 

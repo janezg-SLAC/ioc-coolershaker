@@ -1,2 +1,6 @@
 # setra IOC instance autosave file
 
+file coolerShaker.req
+{
+	{ IOC = "IOC:TST:TMO", BASE="TST:TMO" }
+}
