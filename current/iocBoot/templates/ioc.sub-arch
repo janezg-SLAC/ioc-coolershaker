@@ -1,4 +1,4 @@
-# setra IOC instance autosave file
+# coolershaker IOC instance autosave file
 
 $$LOOP(COOLERSHAKER)
 file coolerShaker.archive

@@ -38,12 +38,12 @@ $$ENDLOOP(COOLERSHAKER)
 #                       pollMsec, 
 #                       plcType);
 $$LOOP(COOLERSHAKER)
-drvModbusAsynConfigure(  "readCoil", "coolerShaker$$INDEX",  1,   1,  1,  1,  0,  3000, "CS_readCoil")
-drvModbusAsynConfigure(  "writeCoil", "coolerShaker$$INDEX",  1,   5,  1,  1,  0,  3000, "CS_writeCoil")
-drvModbusAsynConfigure(  "readDiscreteInput", "coolerShaker$$INDEX",  1, 2,  1,  5,  0,  3000, "CS_readDiscreteInput")
+drvModbusAsynConfigure(  "readCoil",            "coolerShaker$$INDEX",  1, 1,  1,  1,  0,  3000, "CS_readCoil")
+drvModbusAsynConfigure(  "writeCoil",           "coolerShaker$$INDEX",  1, 5,  1,  1,  0,  3000, "CS_writeCoil")
+drvModbusAsynConfigure(  "readDiscreteInput",   "coolerShaker$$INDEX",  1, 2,  1,  5,  0,  3000, "CS_readDiscreteInput")
 drvModbusAsynConfigure(  "readHoldingRegister", "coolerShaker$$INDEX",  1, 3,  1,  8,  0,  3000, "CS_readHoldingRegister")
-drvModbusAsynConfigure(  "writeHoldingRegister", "coolerShaker$$INDEX",  1, 6,  1,  8,  0,  3000, "CS_writeHoldingRegister")
-drvModbusAsynConfigure(  "readInputRegister", "coolerShaker$$INDEX",  1, 4,  1,  2,  0,  3000, "CS_readInputRegister")
+drvModbusAsynConfigure(  "writeHoldingRegister","coolerShaker$$INDEX",  1, 6,  1,  8,  0,  3000, "CS_writeHoldingRegister")
+drvModbusAsynConfigure(  "readInputRegister",   "coolerShaker$$INDEX",  1, 4,  1,  2,  0,  3000, "CS_readInputRegister")
 $$ENDLOOP(COOLERSHAKER)
 
 dbLoadRecords( "db/iocSoft.db",            "IOC=$(IOC_PV)" )

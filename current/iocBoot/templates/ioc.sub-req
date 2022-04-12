@@ -1,4 +1,4 @@
-# setra IOC instance autosave file
+# Leybold IM540 IOC instance autosave file
 
 $$LOOP(COOLERSHAKER)
 file coolerShaker.req
